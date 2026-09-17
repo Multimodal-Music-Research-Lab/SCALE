@@ -1,0 +1,1 @@
+"""SCALE package component."""

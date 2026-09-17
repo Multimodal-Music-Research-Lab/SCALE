@@ -1,0 +1,175 @@
+repo_root: ${oc.env:SCALE_REPO,.}
+data_root: ${oc.env:SCALE_DATA_ROOT,${repo_root}/data}
+feature_root: ${oc.env:SCALE_FEATURE_ROOT,${repo_root}/features}
+manifest_root: ${oc.env:SCALE_MANIFEST_ROOT,${repo_root}/manifests}
+
+model:
+  feature_specs:
+    muq_local: {dim: 1024, rate: 25.0}
+    muq_global: {dim: 1024, rate: 25.0}
+  reference_feature: muq_local
+  use_lyrics: true
+  modality_dim: 512
+  model_dim: 256
+  # Independent functional-label path; boundary adapters use 512 dimensions.
+  function_feature_names: [muq_local, muq_global]
+  function_projection_dim: 1024
+  function_dim: 512
+  function_transformer_layers: 4
+  function_transformer_heads: 8
+  function_dropout: 0.10
+  lyrics_tokenizer_path: ${oc.env:SCALE_LONGFORMER_PATH,${repo_root}/models/longformer-base-4096}
+  lyrics_line_token: <LINE>
+  lyrics_vocab_size: 50266
+  lyrics_attention_window: 128
+  lyrics_longformer_trainable_layers: 2
+  lyrics_hidden_dim: 256
+  lyrics_transformer_layers: 2
+  lyrics_transformer_heads: 8
+  lyrics_dropout: 0.10
+  lyrics_max_block_tokens: 192
+  lyrics_max_line_tokens: 64
+  lyrics_max_blocks: 96
+  lyrics_max_lines_per_block: 16
+  lyrics_recurrence_local_exclusion: 1
+  lyrics_similarity_temperature: 0.20
+  lyrics_frame_hz: 8.333333333333334
+  lyrics_chorus_label_id: 2
+  # 25 Hz reference stream -> 8.333 Hz output tokens.
+  input_downsample: 3
+  modality_dropout: 0.10
+  dropout: 0.10
+  mamba_state_dim: 32
+  mamba_conv_width: 4
+  mamba_expand: 2
+  num_mamba_layers: 4
+  global_pool: 4
+  transformer_heads: 8
+  transformer_ff_dim: 1024
+  num_transformer_layers: 4
+  num_cross_layers: 2
+  num_classes: 128
+
+loss:
+  boundary_pos_weight: 8.0
+  boundary_weight: 1.00
+  local_boundary_weight: 0.20
+  function_weight: 1.00
+  audio_function_weight: 0.50
+  lyrics_chorus_weight: 0.20
+  lyrics_chorus_pos_weight: 3.0
+
+decode:
+  frame_hz: 8.333333333333334
+  threshold: 0.35
+  min_segment_seconds: 2.0
+
+evaluation:
+  # Map pre-chorus to verse for evaluation.
+  prechorus2what: verse
+
+training:
+  lr: 0.00015
+  lyrics_encoder_lr: 0.00001
+  betas: [0.9, 0.98]
+  weight_decay: 0.0001
+  warmup_steps: 600
+  max_steps: 12010
+  accumulation_steps: 8
+  grad_clip: 1.0
+  amp: true
+  amp_dtype: bfloat16
+  ema_beta: 0.9995
+  ema_after_step: 200
+  log_interval: 10
+  eval_interval: 400
+  save_interval: 400
+  output_dir: ${repo_root}/outputs/train
+
+train_dataset:
+  class_path: scale.dataset.Dataset
+  dataset_abstracts:
+    - internal_tmp_id: SongFormDB-HX-8Class_train
+      dataset_type: SongFormDB-HX-8Class
+      input_embedding_dir: >-
+        ${feature_root}/hx/muq_local
+        ${feature_root}/hx/muq_global
+      scale_feature_dirs:
+        muq_local: ${feature_root}/hx/muq_local
+        muq_global: ${feature_root}/hx/muq_global
+      label_path: ${data_root}/hx/annotations.jsonl
+      split_ids_path: ${data_root}/hx/train.txt
+      scale_manifest: ${manifest_root}/hx.jsonl
+      lyrics_json_dir: ${data_root}/hx/lyrics
+      multiplier: 4
+    - internal_tmp_id: SheetSageMSA-8Class_train
+      dataset_type: SheetSageMSA
+      adapter: SheetSageMSAAdapter
+      structure_jsonl_paths:
+        - ${data_root}/sheetsagemsa/annotations.jsonl
+      input_embedding_dir: >-
+        ${feature_root}/sheetsagemsa/muq_local
+        ${feature_root}/sheetsagemsa/muq_global
+      scale_feature_dirs:
+        muq_local: ${feature_root}/sheetsagemsa/muq_local
+        muq_global: ${feature_root}/sheetsagemsa/muq_global
+      split_ids_path: ${data_root}/sheetsagemsa/train.txt
+      scale_manifest: ${manifest_root}/sheetsagemsa.jsonl
+      lyrics_json_dir: ${data_root}/sheetsagemsa/lyrics
+      lyrics_song_ids_path: ${data_root}/sheetsagemsa/lyrics_song_ids.txt
+      multiplier: 1
+  hparams: &dataset_hparams
+    output_logits_frame_rates: 8.333333333333334
+    downsample_rates: 3
+    num_neighbors: 8
+    input_dim: 2048
+    slice_dur: 420
+    num_classes: 128
+    frame_rates: 8.333333333333334
+    strict_features: true
+    strict_lyrics: false
+    lyrics_tokenizer_path: ${model.lyrics_tokenizer_path}
+    lyrics_line_token: ${model.lyrics_line_token}
+    lyrics_max_block_tokens: ${model.lyrics_max_block_tokens}
+    lyrics_max_line_tokens: ${model.lyrics_max_line_tokens}
+    lyrics_max_blocks: ${model.lyrics_max_blocks}
+    lyrics_max_lines_per_block: ${model.lyrics_max_lines_per_block}
+    lyrics_chorus_label_id: ${model.lyrics_chorus_label_id}
+    lyrics_chorus_positive_ratio: 0.60
+    lyrics_chorus_negative_ratio: 0.80
+    ssl_feature_names: [muq_local, muq_global]
+    feature_specs: ${model.feature_specs}
+
+eval_dataset:
+  class_path: scale.dataset.Dataset
+  dataset_abstracts:
+    - internal_tmp_id: SongFormDB-HX-8Class_val
+      dataset_type: SongFormDB-HX-8Class
+      input_embedding_dir: >-
+        ${feature_root}/hx/muq_local
+        ${feature_root}/hx/muq_global
+      scale_feature_dirs:
+        muq_local: ${feature_root}/hx/muq_local
+        muq_global: ${feature_root}/hx/muq_global
+      label_path: ${data_root}/hx/annotations.jsonl
+      split_ids_path: ${data_root}/hx/val.txt
+      scale_manifest: ${manifest_root}/hx.jsonl
+      lyrics_json_dir: ${data_root}/hx/lyrics
+      multiplier: 1
+  hparams: *dataset_hparams
+
+train_dataloader:
+  batch_size: 1
+  num_workers: 2
+  shuffle: true
+  drop_last: true
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 2
+
+eval_dataloader:
+  batch_size: 1
+  num_workers: 0
+  shuffle: false
+  drop_last: false
+  pin_memory: true

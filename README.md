@@ -1,6 +1,6 @@
 # SCALE
 
-SCALE predicts section boundaries and semantic labels such as verse and chorus from music audio. It uses separate audio pathways for boundary detection and section labeling, with timestamped lyrics providing additional chorus evidence.
+SCALE predicts section boundaries and labels from music audio. It uses separate audio pathways for boundary detection and section labeling, with timestamped lyrics providing additional chorus evidence. Explore example predictions on the [SCALE demo](https://multimodal-music-research-lab.github.io/scale-demo/). The static demo source is in [`docs/`](docs/).
 
 ## Quick start: inference with pretrained weights
 
@@ -17,7 +17,7 @@ CUDA_VISIBLE_DEVICES=0 bash scripts/infer.sh \
 
 This command extracts audio features and timestamped lyrics, then writes section predictions. Training data and retraining are not required for inference.
 
-**Release status:** the public checkpoint download link has not been added yet. The command above requires a compatible SCALE checkpoint obtained separately. SheetSage-MSA is not yet publicly released; full training reproduction depends on its annotations, splits, and lyric-selection metadata becoming available. Neither weights nor datasets are bundled with the code.
+**Release status:** a verified pretrained checkpoint will be distributed through [GitHub Releases](https://github.com/Multimodal-Music-Research-Lab/SCALE/releases); no download is available yet. The command above requires a compatible SCALE checkpoint obtained separately. SheetSage-MSA is not yet publicly released; full training reproduction depends on its annotations, splits, and lyric-selection metadata becoming available. Neither weights nor datasets are bundled with the code.
 
 ## Installation
 
@@ -100,7 +100,7 @@ outputs/example/
   lyrics_cache/<song_id>.json  # Created when extracting lyrics without --lyrics-dir
 ```
 
-MuQ features for this pipeline are temporary. Use the preprocessing commands below to retain features for training. Inference defaults to the HX label set (`--dataset-id 5`); use `--dataset-id 9` for SheetSage-MSA. This option selects valid output labels, not a source embedding.
+MuQ features for this pipeline are temporary. Use the preprocessing commands below to retain features for training. Inference uses the shared HX and SheetSage-MSA output labels; no source embedding is used.
 
 ## Evaluation
 
@@ -114,7 +114,6 @@ CUDA_VISIBLE_DEVICES=0 bash scripts/infer_eval.sh \
   --output-dir outputs/test \
   --use-lyrics yes \
   --language English \
-  --dataset-id 5 \
   --prechorus-policy verse
 ```
 

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Interactive companion demo for SCALE: Structural Context from Audio and Lyric Evidence for Music Structure Analysis." />
+    <title>SCALE — Music Structure Analysis Demo</title>
+    <link rel="canonical" href="https://multimodal-music-research-lab.github.io/SCALE/" />
+    <link rel="preconnect" href="https://huggingface.co" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23070d18'/%3E%3Cpath d='M12 42h10V23H12zm15 0h10V14H27zm15 0h10V29H42z' fill='%236de2bd'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="SCALE demo home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>SCALE <small>DEMO</small></span>
+      </a>
+      <nav aria-label="Project links">
+        <a class="nav-link" href="https://github.com/Multimodal-Music-Research-Lab/SCALE" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="intro" aria-labelledby="page-title">
+        <h1 id="page-title">SCALE</h1>
+        <p class="dek">Structural Context from Audio and Lyric Evidence for Music Structure Analysis.</p>
+        <p class="intro-copy">
+          SCALE detects musical section boundaries and classifies each section as intro, verse, chorus,
+          bridge, instrumental, outro, or silence. This page provides synchronized playback for selected
+          SongFormBench-HX test songs and compares SCALE predictions with the ground-truth annotations
+          on a shared timeline.
+        </p>
+      </section>
+
+      <section class="demo-shell" aria-labelledby="demo-title">
+        <div class="demo-heading">
+          <div>
+            <p class="section-kicker">10 curated HX examples</p>
+            <h2 id="demo-title">Explore the predictions</h2>
+          </div>
+          <p class="selection-note">
+            These examples come from <a href="https://huggingface.co/datasets/ASLP-lab/SongFormBench" target="_blank" rel="noreferrer">SongFormBench-HX</a>,
+            the 200-song HarmonixSet subset of SongFormBench.
+          </p>
+        </div>
+
+        <div class="mobile-picker">
+          <label for="song-select">Choose a song</label>
+          <select id="song-select"></select>
+        </div>
+
+        <div class="demo-grid">
+          <aside class="song-panel" aria-label="Song examples">
+            <p class="panel-label">Choose a song</p>
+            <ol id="song-list" class="song-list"></ol>
+          </aside>
+
+          <div class="result-panel">
+            <div class="track-header">
+              <div>
+                <p id="track-id" class="track-id"></p>
+                <h3 id="track-title">Loading examples…</h3>
+                <p id="track-artist" class="track-artist"></p>
+              </div>
+              <div class="metrics" aria-label="SCALE performance for the selected song">
+                <div class="metric"><span>HR.5F</span><strong id="metric-hr05">—</strong></div>
+                <div class="metric"><span>HR3F</span><strong id="metric-hr3">—</strong></div>
+                <div class="metric"><span>ACC</span><strong id="metric-acc">—</strong></div>
+              </div>
+            </div>
+
+            <div class="media-and-structure">
+              <section class="player-card" aria-labelledby="audio-title">
+                <div class="card-heading">
+                  <div>
+                    <p class="card-kicker">Audio source</p>
+                    <h4 id="audio-title">Listen to the SongFormBench audio</h4>
+                  </div>
+                  <span class="duration" id="duration">—</span>
+                </div>
+                <div class="player-wrap">
+                  <audio id="audio-player" controls preload="metadata" aria-label="SongFormBench audio player"></audio>
+                </div>
+                <p class="source-fallback">
+                  Audio from <a href="https://huggingface.co/datasets/ASLP-lab/SongFormBench" target="_blank" rel="noreferrer">SongFormBench</a>
+                  (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer" title="Creative Commons Attribution 4.0 International">CC BY 4.0</a>).
+                  <a id="source-link" href="#" target="_blank" rel="noreferrer">Open WAV ↗</a>
+                </p>
+              </section>
+
+              <section class="structure-card" aria-labelledby="structure-title">
+                <div class="card-heading structure-heading">
+                  <div>
+                    <p class="card-kicker">Music structure</p>
+                    <h4 id="structure-title">Ground truth and SCALE prediction</h4>
+                  </div>
+                  <p class="interaction-hint">Click a segment to seek</p>
+                </div>
+
+                <div id="legend" class="legend" aria-label="Section label legend"></div>
+
+                <div class="ruler-wrap" aria-hidden="true">
+                  <div class="row-spacer"></div>
+                  <div id="time-ruler" class="time-ruler"></div>
+                </div>
+
+                <div class="timeline-row">
+                  <div class="row-label">
+                    <strong>Ground truth</strong>
+                    <span>HX annotation</span>
+                  </div>
+                  <div id="reference-track" class="timeline" role="group" aria-label="Ground-truth structure"></div>
+                </div>
+
+                <div class="timeline-row">
+                  <div class="row-label">
+                    <strong>SCALE</strong>
+                    <span>prediction</span>
+                  </div>
+                  <div id="prediction-track" class="timeline" role="group" aria-label="SCALE predicted structure"></div>
+                </div>
+
+                <div class="timeline-footer">
+                  <span><i class="playhead-key"></i> Playback position</span>
+                  <span id="current-time">00:00 / 00:00</span>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>SCALE · Structural Context from Audio and Lyric Evidence for Music Structure Analysis</p>
+      <p>Hongbing Li · Yaolong Ju</p>
+    </footer>
+
+    <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+    <script src="./app.js"></script>
+  </body>
+</html>

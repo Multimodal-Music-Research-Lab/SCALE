@@ -38,7 +38,6 @@ def feature_batch(
     result = {
         "features": features,
         "feature_lengths": lengths,
-        "dataset_ids": torch.tensor([int(record["dataset_id"])], device=device),
     }
     if lyrics_tokenizer is not None:
         lyrics_path = lyrics_dir / f"{record['song_id']}.json"
@@ -84,8 +83,6 @@ def main(args: argparse.Namespace) -> None:
     if set(directories) != expected:
         raise ValueError(f"Feature dirs must be exactly {sorted(expected)}, got {sorted(directories)}")
     records = read_jsonl(args.manifest)
-    for record in records:
-        record["dataset_id"] = args.dataset_id
     records.sort(key=lambda item: (item["song_id"], float(item["start_sec"])))
     frame_hz = float(config.decode.frame_hz)
     song_outputs = {}
@@ -123,7 +120,7 @@ def main(args: argparse.Namespace) -> None:
         segments = decode(
             boundary_sum / counts,
             function_sum / counts[:, None],
-            int(config.decode.get("label_mask_dataset_id", args.dataset_id)),
+            5,  # HX and SheetSage-MSA share the same output label set.
             frame_hz,
             float(config.decode.threshold),
             float(config.decode.min_segment_seconds),
@@ -147,7 +144,6 @@ if __name__ == "__main__":
     parser.add_argument("--manifest", required=True)
     parser.add_argument("--feature-dir", action="append", required=True)
     parser.add_argument("--lyrics-dir", default="/__scale_lyrics_disabled__")
-    parser.add_argument("--dataset-id", type=int, default=5)
     parser.add_argument("--device", default="cuda:0")
     parser.add_argument("--output-dir", required=True)
     parser.add_argument(

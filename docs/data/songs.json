@@ -1,0 +1,1377 @@
+[
+  {
+    "id": "BHX_0748_imyours",
+    "title": "I'm Yours",
+    "artist": "Jason Mraz",
+    "duration": 211.9981859410431,
+    "metrics": {
+      "hr05f": 0.7826086956521738,
+      "hr3f": 0.7826086956521738,
+      "acc": 0.8133471008583795
+    },
+    "reference": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 12.946668
+      },
+      {
+        "label": "verse",
+        "start": 12.946668,
+        "end": 38.774483
+      },
+      {
+        "label": "chorus",
+        "start": 38.774483,
+        "end": 64.204947
+      },
+      {
+        "label": "verse",
+        "start": 64.204947,
+        "end": 92.814219
+      },
+      {
+        "label": "chorus",
+        "start": 92.814219,
+        "end": 118.244683
+      },
+      {
+        "label": "inst",
+        "start": 118.244683,
+        "end": 143.277796
+      },
+      {
+        "label": "verse",
+        "start": 143.277796,
+        "end": 169.105611
+      },
+      {
+        "label": "chorus",
+        "start": 169.105611,
+        "end": 181.820843
+      },
+      {
+        "label": "outro",
+        "start": 181.820843,
+        "end": 207.251307
+      }
+    ],
+    "prediction": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 13.079999999999998
+      },
+      {
+        "label": "verse",
+        "start": 13.079999999999998,
+        "end": 38.64
+      },
+      {
+        "label": "chorus",
+        "start": 38.64,
+        "end": 51.36
+      },
+      {
+        "label": "chorus",
+        "start": 51.36,
+        "end": 64.32
+      },
+      {
+        "label": "verse",
+        "start": 64.32,
+        "end": 92.63999999999999
+      },
+      {
+        "label": "chorus",
+        "start": 92.63999999999999,
+        "end": 118.08
+      },
+      {
+        "label": "chorus",
+        "start": 118.08,
+        "end": 130.67999999999998
+      },
+      {
+        "label": "inst",
+        "start": 130.67999999999998,
+        "end": 143.16
+      },
+      {
+        "label": "verse",
+        "start": 143.16,
+        "end": 156.35999999999999
+      },
+      {
+        "label": "verse",
+        "start": 156.35999999999999,
+        "end": 168.95999999999998
+      },
+      {
+        "label": "chorus",
+        "start": 168.95999999999998,
+        "end": 181.79999999999998
+      },
+      {
+        "label": "chorus",
+        "start": 181.79999999999998,
+        "end": 211.92
+      }
+    ]
+  },
+  {
+    "id": "BHX_0835_notetogod",
+    "title": "Note to God",
+    "artist": "Charice",
+    "duration": 239.95501133786848,
+    "metrics": {
+      "hr05f": 0.75,
+      "hr3f": 0.75,
+      "acc": 0.9290008723940987
+    },
+    "reference": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 7.107143
+      },
+      {
+        "label": "verse",
+        "start": 7.107143,
+        "end": 39.107143
+      },
+      {
+        "label": "verse",
+        "start": 39.107143,
+        "end": 72.107143
+      },
+      {
+        "label": "chorus",
+        "start": 72.107143,
+        "end": 91.107143
+      },
+      {
+        "label": "verse",
+        "start": 91.107143,
+        "end": 124.107143
+      },
+      {
+        "label": "chorus",
+        "start": 124.107143,
+        "end": 156.107143
+      },
+      {
+        "label": "bridge",
+        "start": 156.107143,
+        "end": 170.693348
+      },
+      {
+        "label": "chorus",
+        "start": 170.693348,
+        "end": 202.693348
+      },
+      {
+        "label": "outro",
+        "start": 202.693348,
+        "end": 232.693348
+      }
+    ],
+    "prediction": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 6.959999999999999
+      },
+      {
+        "label": "verse",
+        "start": 6.959999999999999,
+        "end": 39.239999999999995
+      },
+      {
+        "label": "verse",
+        "start": 39.239999999999995,
+        "end": 72.0
+      },
+      {
+        "label": "chorus",
+        "start": 72.0,
+        "end": 91.19999999999999
+      },
+      {
+        "label": "verse",
+        "start": 91.19999999999999,
+        "end": 124.07999999999998
+      },
+      {
+        "label": "chorus",
+        "start": 124.07999999999998,
+        "end": 156.0
+      },
+      {
+        "label": "bridge",
+        "start": 156.0,
+        "end": 170.64
+      },
+      {
+        "label": "bridge",
+        "start": 170.64,
+        "end": 186.72
+      },
+      {
+        "label": "chorus",
+        "start": 186.72,
+        "end": 202.67999999999998
+      },
+      {
+        "label": "outro",
+        "start": 202.67999999999998,
+        "end": 213.83999999999997
+      },
+      {
+        "label": "outro",
+        "start": 213.83999999999997,
+        "end": 218.99999999999997
+      },
+      {
+        "label": "outro",
+        "start": 218.99999999999997,
+        "end": 236.76
+      },
+      {
+        "label": "silence",
+        "start": 236.76,
+        "end": 239.88
+      }
+    ]
+  },
+  {
+    "id": "BHX_0555_allaroundme",
+    "title": "All Around Me",
+    "artist": "Flyleaf",
+    "duration": 197.6018140589569,
+    "metrics": {
+      "hr05f": 0.8571428571428571,
+      "hr3f": 0.8571428571428571,
+      "acc": 0.8596806029068724
+    },
+    "reference": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 16.064
+      },
+      {
+        "label": "verse",
+        "start": 16.064,
+        "end": 45.808224
+      },
+      {
+        "label": "verse",
+        "start": 45.808224,
+        "end": 55.604136
+      },
+      {
+        "label": "chorus",
+        "start": 55.604136,
+        "end": 71.930656
+      },
+      {
+        "label": "verse",
+        "start": 71.930656,
+        "end": 98.053088
+      },
+      {
+        "label": "verse",
+        "start": 98.053088,
+        "end": 107.849
+      },
+      {
+        "label": "chorus",
+        "start": 107.849,
+        "end": 124.17552
+      },
+      {
+        "label": "bridge",
+        "start": 124.17552,
+        "end": 143.767344
+      },
+      {
+        "label": "verse",
+        "start": 143.767344,
+        "end": 156.82856
+      },
+      {
+        "label": "chorus",
+        "start": 156.82856,
+        "end": 169.889776
+      },
+      {
+        "label": "chorus",
+        "start": 169.889776,
+        "end": 176.420384
+      },
+      {
+        "label": "outro",
+        "start": 176.420384,
+        "end": 189.4816
+      }
+    ],
+    "prediction": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 16.32
+      },
+      {
+        "label": "verse",
+        "start": 16.32,
+        "end": 36.0
+      },
+      {
+        "label": "verse",
+        "start": 36.0,
+        "end": 45.839999999999996
+      },
+      {
+        "label": "pre-chorus",
+        "start": 45.839999999999996,
+        "end": 55.559999999999995
+      },
+      {
+        "label": "chorus",
+        "start": 55.559999999999995,
+        "end": 71.88
+      },
+      {
+        "label": "verse",
+        "start": 71.88,
+        "end": 84.83999999999999
+      },
+      {
+        "label": "verse",
+        "start": 84.83999999999999,
+        "end": 97.91999999999999
+      },
+      {
+        "label": "pre-chorus",
+        "start": 97.91999999999999,
+        "end": 107.75999999999999
+      },
+      {
+        "label": "chorus",
+        "start": 107.75999999999999,
+        "end": 124.19999999999999
+      },
+      {
+        "label": "bridge",
+        "start": 124.19999999999999,
+        "end": 143.64
+      },
+      {
+        "label": "bridge",
+        "start": 143.64,
+        "end": 156.72
+      },
+      {
+        "label": "chorus",
+        "start": 156.72,
+        "end": 176.28
+      },
+      {
+        "label": "chorus",
+        "start": 176.28,
+        "end": 189.6
+      },
+      {
+        "label": "intro",
+        "start": 189.6,
+        "end": 197.51999999999998
+      }
+    ]
+  },
+  {
+    "id": "BHX_0860_pieceofme",
+    "title": "Piece of Me",
+    "artist": "Britney Spears",
+    "duration": 210.60498866213152,
+    "metrics": {
+      "hr05f": 0.8148148148148148,
+      "hr3f": 0.888888888888889,
+      "acc": 0.6821097307994946
+    },
+    "reference": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 9.346898
+      },
+      {
+        "label": "verse",
+        "start": 9.346898,
+        "end": 26.042546
+      },
+      {
+        "label": "chorus",
+        "start": 26.042546,
+        "end": 60.47732
+      },
+      {
+        "label": "inst",
+        "start": 60.47732,
+        "end": 67.781666
+      },
+      {
+        "label": "verse",
+        "start": 67.781666,
+        "end": 101.172962
+      },
+      {
+        "label": "chorus",
+        "start": 101.172962,
+        "end": 118.912088
+      },
+      {
+        "label": "inst",
+        "start": 118.912088,
+        "end": 126.216434
+      },
+      {
+        "label": "verse",
+        "start": 126.216434,
+        "end": 143.95556
+      },
+      {
+        "label": "outro",
+        "start": 143.95556,
+        "end": 160.129469
+      },
+      {
+        "label": "chorus",
+        "start": 160.129469,
+        "end": 194.042504
+      },
+      {
+        "label": "outro",
+        "start": 194.042504,
+        "end": 209.694674
+      }
+    ],
+    "prediction": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 1.92
+      },
+      {
+        "label": "intro",
+        "start": 1.92,
+        "end": 9.719999999999999
+      },
+      {
+        "label": "verse",
+        "start": 9.719999999999999,
+        "end": 26.4
+      },
+      {
+        "label": "verse",
+        "start": 26.4,
+        "end": 42.959999999999994
+      },
+      {
+        "label": "chorus",
+        "start": 42.959999999999994,
+        "end": 60.48
+      },
+      {
+        "label": "chorus",
+        "start": 60.48,
+        "end": 68.16
+      },
+      {
+        "label": "verse",
+        "start": 68.16,
+        "end": 101.52
+      },
+      {
+        "label": "chorus",
+        "start": 101.52,
+        "end": 118.91999999999999
+      },
+      {
+        "label": "chorus",
+        "start": 118.91999999999999,
+        "end": 126.6
+      },
+      {
+        "label": "bridge",
+        "start": 126.6,
+        "end": 144.0
+      },
+      {
+        "label": "bridge",
+        "start": 144.0,
+        "end": 159.83999999999997
+      },
+      {
+        "label": "chorus",
+        "start": 159.83999999999997,
+        "end": 177.23999999999998
+      },
+      {
+        "label": "chorus",
+        "start": 177.23999999999998,
+        "end": 193.92
+      },
+      {
+        "label": "outro",
+        "start": 193.92,
+        "end": 210.6
+      }
+    ]
+  },
+  {
+    "id": "BHX_0705_haditall",
+    "title": "Had It All",
+    "artist": "Katharine McPhee",
+    "duration": 184.50575963718822,
+    "metrics": {
+      "hr05f": 0.75,
+      "hr3f": 0.8333333333333333,
+      "acc": 0.8873355530731104
+    },
+    "reference": [
+      {
+        "label": "verse",
+        "start": 0.0,
+        "end": 26.121739
+      },
+      {
+        "label": "chorus",
+        "start": 26.121739,
+        "end": 58.121739
+      },
+      {
+        "label": "verse",
+        "start": 58.121739,
+        "end": 77.321739
+      },
+      {
+        "label": "chorus",
+        "start": 77.321739,
+        "end": 102.921739
+      },
+      {
+        "label": "bridge",
+        "start": 102.921739,
+        "end": 118.921739
+      },
+      {
+        "label": "inst",
+        "start": 118.921739,
+        "end": 131.721739
+      },
+      {
+        "label": "chorus",
+        "start": 131.721739,
+        "end": 157.321739
+      },
+      {
+        "label": "outro",
+        "start": 157.321739,
+        "end": 181.513781
+      },
+      {
+        "label": "silence",
+        "start": 181.513781,
+        "end": 184.405781
+      }
+    ],
+    "prediction": [
+      {
+        "label": "verse",
+        "start": 0.0,
+        "end": 13.079999999999998
+      },
+      {
+        "label": "verse",
+        "start": 13.079999999999998,
+        "end": 25.68
+      },
+      {
+        "label": "chorus",
+        "start": 25.68,
+        "end": 51.72
+      },
+      {
+        "label": "inst",
+        "start": 51.72,
+        "end": 58.08
+      },
+      {
+        "label": "verse",
+        "start": 58.08,
+        "end": 76.8
+      },
+      {
+        "label": "chorus",
+        "start": 76.8,
+        "end": 102.83999999999999
+      },
+      {
+        "label": "bridge",
+        "start": 102.83999999999999,
+        "end": 118.91999999999999
+      },
+      {
+        "label": "inst",
+        "start": 118.91999999999999,
+        "end": 131.51999999999998
+      },
+      {
+        "label": "chorus",
+        "start": 131.51999999999998,
+        "end": 157.2
+      },
+      {
+        "label": "chorus",
+        "start": 157.2,
+        "end": 163.67999999999998
+      },
+      {
+        "label": "chorus",
+        "start": 163.67999999999998,
+        "end": 170.16
+      },
+      {
+        "label": "outro",
+        "start": 170.16,
+        "end": 181.79999999999998
+      },
+      {
+        "label": "silence",
+        "start": 181.79999999999998,
+        "end": 184.44
+      }
+    ]
+  },
+  {
+    "id": "BHX_0512_theshowgoeson",
+    "title": "The Show Goes On",
+    "artist": "Lupe Fiasco",
+    "duration": 234.93950113378685,
+    "metrics": {
+      "hr05f": 0.6086956521739131,
+      "hr3f": 0.6956521739130435,
+      "acc": 0.9941718351760193
+    },
+    "reference": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 14.673648
+      },
+      {
+        "label": "chorus",
+        "start": 14.673648,
+        "end": 41.526768
+      },
+      {
+        "label": "verse",
+        "start": 41.526768,
+        "end": 82.226028
+      },
+      {
+        "label": "chorus",
+        "start": 82.226028,
+        "end": 109.079148
+      },
+      {
+        "label": "verse",
+        "start": 109.079148,
+        "end": 149.358828
+      },
+      {
+        "label": "chorus",
+        "start": 149.358828,
+        "end": 176.211948
+      },
+      {
+        "label": "verse",
+        "start": 176.211948,
+        "end": 203.065068
+      },
+      {
+        "label": "chorus",
+        "start": 203.065068,
+        "end": 229.918188
+      }
+    ],
+    "prediction": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 1.68
+      },
+      {
+        "label": "intro",
+        "start": 1.68,
+        "end": 14.879999999999999
+      },
+      {
+        "label": "chorus",
+        "start": 14.879999999999999,
+        "end": 28.439999999999998
+      },
+      {
+        "label": "chorus",
+        "start": 28.439999999999998,
+        "end": 41.76
+      },
+      {
+        "label": "verse",
+        "start": 41.76,
+        "end": 82.19999999999999
+      },
+      {
+        "label": "chorus",
+        "start": 82.19999999999999,
+        "end": 108.96
+      },
+      {
+        "label": "verse",
+        "start": 108.96,
+        "end": 135.84
+      },
+      {
+        "label": "verse",
+        "start": 135.84,
+        "end": 149.28
+      },
+      {
+        "label": "chorus",
+        "start": 149.28,
+        "end": 175.67999999999998
+      },
+      {
+        "label": "verse",
+        "start": 175.67999999999998,
+        "end": 202.92
+      },
+      {
+        "label": "chorus",
+        "start": 202.92,
+        "end": 216.35999999999999
+      },
+      {
+        "label": "chorus",
+        "start": 216.35999999999999,
+        "end": 233.64
+      },
+      {
+        "label": "intro",
+        "start": 233.64,
+        "end": 234.95999999999998
+      }
+    ]
+  },
+  {
+    "id": "BHX_0649_down",
+    "title": "Down",
+    "artist": "Jay Sean feat. Lil Wayne",
+    "duration": 212.0910657596372,
+    "metrics": {
+      "hr05f": 0.8666666666666666,
+      "hr3f": 0.8666666666666666,
+      "acc": 0.7378349380107672
+    },
+    "reference": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 4.980233
+      },
+      {
+        "label": "intro",
+        "start": 4.980233,
+        "end": 21.343853
+      },
+      {
+        "label": "verse",
+        "start": 21.343853,
+        "end": 50.434733
+      },
+      {
+        "label": "verse",
+        "start": 50.434733,
+        "end": 63.161993
+      },
+      {
+        "label": "chorus",
+        "start": 63.161993,
+        "end": 80.434703
+      },
+      {
+        "label": "verse",
+        "start": 80.434703,
+        "end": 108.616493
+      },
+      {
+        "label": "verse",
+        "start": 108.616493,
+        "end": 121.343753
+      },
+      {
+        "label": "chorus",
+        "start": 121.343753,
+        "end": 138.616463
+      },
+      {
+        "label": "bridge",
+        "start": 138.616463,
+        "end": 166.798253
+      },
+      {
+        "label": "verse",
+        "start": 166.798253,
+        "end": 179.525513
+      },
+      {
+        "label": "outro",
+        "start": 179.525513,
+        "end": 197.037639
+      },
+      {
+        "label": "inst",
+        "start": 197.037639,
+        "end": 211.568889
+      }
+    ],
+    "prediction": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 5.04
+      },
+      {
+        "label": "intro",
+        "start": 5.04,
+        "end": 21.36
+      },
+      {
+        "label": "verse",
+        "start": 21.36,
+        "end": 35.76
+      },
+      {
+        "label": "verse",
+        "start": 35.76,
+        "end": 50.4
+      },
+      {
+        "label": "chorus",
+        "start": 50.4,
+        "end": 63.12
+      },
+      {
+        "label": "chorus",
+        "start": 63.12,
+        "end": 80.39999999999999
+      },
+      {
+        "label": "verse",
+        "start": 80.39999999999999,
+        "end": 93.96
+      },
+      {
+        "label": "verse",
+        "start": 93.96,
+        "end": 108.6
+      },
+      {
+        "label": "chorus",
+        "start": 108.6,
+        "end": 121.44
+      },
+      {
+        "label": "chorus",
+        "start": 121.44,
+        "end": 135.84
+      },
+      {
+        "label": "chorus",
+        "start": 135.84,
+        "end": 138.6
+      },
+      {
+        "label": "bridge",
+        "start": 138.6,
+        "end": 166.92
+      },
+      {
+        "label": "chorus",
+        "start": 166.92,
+        "end": 179.51999999999998
+      },
+      {
+        "label": "chorus",
+        "start": 179.51999999999998,
+        "end": 182.16
+      },
+      {
+        "label": "outro",
+        "start": 182.16,
+        "end": 196.92
+      },
+      {
+        "label": "outro",
+        "start": 196.92,
+        "end": 212.04
+      }
+    ]
+  },
+  {
+    "id": "BHX_0911_someday",
+    "title": "I'll Be Back Someday",
+    "artist": "Tegan and Sara",
+    "duration": 177.77197278911564,
+    "metrics": {
+      "hr05f": 0.8275862068965517,
+      "hr3f": 0.896551724137931,
+      "acc": 0.928390517357828
+    },
+    "reference": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 12.263946
+      },
+      {
+        "label": "verse",
+        "start": 12.263946,
+        "end": 23.830218
+      },
+      {
+        "label": "chorus",
+        "start": 23.830218,
+        "end": 35.39649
+      },
+      {
+        "label": "inst",
+        "start": 35.39649,
+        "end": 46.962762
+      },
+      {
+        "label": "verse",
+        "start": 46.962762,
+        "end": 58.529034
+      },
+      {
+        "label": "verse",
+        "start": 58.529034,
+        "end": 70.095306
+      },
+      {
+        "label": "chorus",
+        "start": 70.095306,
+        "end": 81.661578
+      },
+      {
+        "label": "chorus",
+        "start": 81.661578,
+        "end": 93.22785
+      },
+      {
+        "label": "bridge",
+        "start": 93.22785,
+        "end": 116.360394
+      },
+      {
+        "label": "inst",
+        "start": 116.360394,
+        "end": 127.926666
+      },
+      {
+        "label": "chorus",
+        "start": 127.926666,
+        "end": 139.492938
+      },
+      {
+        "label": "chorus",
+        "start": 139.492938,
+        "end": 151.05921
+      },
+      {
+        "label": "chorus",
+        "start": 151.05921,
+        "end": 162.625482
+      },
+      {
+        "label": "chorus",
+        "start": 162.625482,
+        "end": 175.708
+      },
+      {
+        "label": "silence",
+        "start": 175.708,
+        "end": 177.672
+      }
+    ],
+    "prediction": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 12.12
+      },
+      {
+        "label": "verse",
+        "start": 12.12,
+        "end": 23.639999999999997
+      },
+      {
+        "label": "chorus",
+        "start": 23.639999999999997,
+        "end": 35.4
+      },
+      {
+        "label": "inst",
+        "start": 35.4,
+        "end": 46.68
+      },
+      {
+        "label": "verse",
+        "start": 46.68,
+        "end": 70.08
+      },
+      {
+        "label": "chorus",
+        "start": 70.08,
+        "end": 93.24
+      },
+      {
+        "label": "bridge",
+        "start": 93.24,
+        "end": 116.27999999999999
+      },
+      {
+        "label": "bridge",
+        "start": 116.27999999999999,
+        "end": 127.91999999999999
+      },
+      {
+        "label": "chorus",
+        "start": 127.91999999999999,
+        "end": 139.56
+      },
+      {
+        "label": "chorus",
+        "start": 139.56,
+        "end": 150.95999999999998
+      },
+      {
+        "label": "chorus",
+        "start": 150.95999999999998,
+        "end": 175.2
+      },
+      {
+        "label": "silence",
+        "start": 175.2,
+        "end": 177.72
+      }
+    ]
+  },
+  {
+    "id": "BHX_0752_inmyhead",
+    "title": "In My Head",
+    "artist": "Jason Derulo",
+    "duration": 196.71945578231293,
+    "metrics": {
+      "hr05f": 0.9230769230769231,
+      "hr3f": 0.9230769230769231,
+      "acc": 0.677147231277143
+    },
+    "reference": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 8.76478
+      },
+      {
+        "label": "verse",
+        "start": 8.76478,
+        "end": 26.21934
+      },
+      {
+        "label": "verse",
+        "start": 26.21934,
+        "end": 43.128445
+      },
+      {
+        "label": "chorus",
+        "start": 43.128445,
+        "end": 61.12846
+      },
+      {
+        "label": "inst",
+        "start": 61.12846,
+        "end": 69.85574
+      },
+      {
+        "label": "verse",
+        "start": 69.85574,
+        "end": 87.3103
+      },
+      {
+        "label": "verse",
+        "start": 87.3103,
+        "end": 104.219405
+      },
+      {
+        "label": "chorus",
+        "start": 104.219405,
+        "end": 122.21942
+      },
+      {
+        "label": "inst",
+        "start": 122.21942,
+        "end": 139.67398
+      },
+      {
+        "label": "verse",
+        "start": 139.67398,
+        "end": 156.583085
+      },
+      {
+        "label": "chorus",
+        "start": 156.583085,
+        "end": 174.037645
+      },
+      {
+        "label": "outro",
+        "start": 174.037645,
+        "end": 192.03766
+      }
+    ],
+    "prediction": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 8.52
+      },
+      {
+        "label": "verse",
+        "start": 8.52,
+        "end": 26.04
+      },
+      {
+        "label": "pre-chorus",
+        "start": 26.04,
+        "end": 42.839999999999996
+      },
+      {
+        "label": "chorus",
+        "start": 42.839999999999996,
+        "end": 60.839999999999996
+      },
+      {
+        "label": "chorus",
+        "start": 60.839999999999996,
+        "end": 69.83999999999999
+      },
+      {
+        "label": "verse",
+        "start": 69.83999999999999,
+        "end": 87.24
+      },
+      {
+        "label": "pre-chorus",
+        "start": 87.24,
+        "end": 103.91999999999999
+      },
+      {
+        "label": "chorus",
+        "start": 103.91999999999999,
+        "end": 122.16
+      },
+      {
+        "label": "bridge",
+        "start": 122.16,
+        "end": 139.56
+      },
+      {
+        "label": "bridge",
+        "start": 139.56,
+        "end": 156.6
+      },
+      {
+        "label": "chorus",
+        "start": 156.6,
+        "end": 174.48
+      },
+      {
+        "label": "chorus",
+        "start": 174.48,
+        "end": 196.67999999999998
+      }
+    ]
+  },
+  {
+    "id": "BHX_0714_hell",
+    "title": "Hell",
+    "artist": "Tegan and Sara",
+    "duration": 204.3356009070295,
+    "metrics": {
+      "hr05f": 0.967741935483871,
+      "hr3f": 0.967741935483871,
+      "acc": 0.8852357077106876
+    },
+    "reference": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 12.366272
+      },
+      {
+        "label": "intro",
+        "start": 12.366272,
+        "end": 23.932544
+      },
+      {
+        "label": "verse",
+        "start": 23.932544,
+        "end": 35.13737
+      },
+      {
+        "label": "verse",
+        "start": 35.13737,
+        "end": 47.065088
+      },
+      {
+        "label": "chorus",
+        "start": 47.065088,
+        "end": 70.197632
+      },
+      {
+        "label": "inst",
+        "start": 70.197632,
+        "end": 81.763904
+      },
+      {
+        "label": "verse",
+        "start": 81.763904,
+        "end": 92.96873
+      },
+      {
+        "label": "verse",
+        "start": 92.96873,
+        "end": 104.896448
+      },
+      {
+        "label": "chorus",
+        "start": 104.896448,
+        "end": 128.028992
+      },
+      {
+        "label": "inst",
+        "start": 128.028992,
+        "end": 139.595264
+      },
+      {
+        "label": "verse",
+        "start": 139.595264,
+        "end": 151.161536
+      },
+      {
+        "label": "chorus",
+        "start": 151.161536,
+        "end": 174.29408
+      },
+      {
+        "label": "chorus",
+        "start": 174.29408,
+        "end": 202.447625
+      },
+      {
+        "label": "silence",
+        "start": 202.447625,
+        "end": 204.235625
+      }
+    ],
+    "prediction": [
+      {
+        "label": "intro",
+        "start": 0.0,
+        "end": 12.36
+      },
+      {
+        "label": "intro",
+        "start": 12.36,
+        "end": 23.88
+      },
+      {
+        "label": "verse",
+        "start": 23.88,
+        "end": 35.519999999999996
+      },
+      {
+        "label": "verse",
+        "start": 35.519999999999996,
+        "end": 47.04
+      },
+      {
+        "label": "chorus",
+        "start": 47.04,
+        "end": 70.19999999999999
+      },
+      {
+        "label": "inst",
+        "start": 70.19999999999999,
+        "end": 81.72
+      },
+      {
+        "label": "verse",
+        "start": 81.72,
+        "end": 93.36
+      },
+      {
+        "label": "verse",
+        "start": 93.36,
+        "end": 104.88
+      },
+      {
+        "label": "chorus",
+        "start": 104.88,
+        "end": 128.04
+      },
+      {
+        "label": "bridge",
+        "start": 128.04,
+        "end": 139.44
+      },
+      {
+        "label": "bridge",
+        "start": 139.44,
+        "end": 151.2
+      },
+      {
+        "label": "chorus",
+        "start": 151.2,
+        "end": 174.23999999999998
+      },
+      {
+        "label": "chorus",
+        "start": 174.23999999999998,
+        "end": 194.64
+      },
+      {
+        "label": "chorus",
+        "start": 194.64,
+        "end": 202.32
+      },
+      {
+        "label": "silence",
+        "start": 202.32,
+        "end": 204.35999999999999
+      }
+    ]
+  }
+]

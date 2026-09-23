@@ -202,7 +202,7 @@ def infer(args: argparse.Namespace) -> None:
                    "--checkpoint", args.checkpoint, "--manifest", str(manifest),
                    "--feature-dir", f"muq_local={ssl / 'muq_local'}",
                    "--feature-dir", f"muq_global={ssl / 'muq_global'}",
-                   "--lyrics-dir", str(lyrics), "--dataset-id", str(args.dataset_id),
+                   "--lyrics-dir", str(lyrics),
                    "--device", args.device, "--output-dir", str(prediction),
                    "--txt-output-dir", str(txt)]
         if args.save_logits:
@@ -238,7 +238,6 @@ def add_inference(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--language", default="English", choices=["English", "Mandarin", "Cantonese"])
     parser.add_argument("--lyrics-dir")
     parser.add_argument("--allow-missing-lyrics", action="store_true")
-    parser.add_argument("--dataset-id", type=int, default=5)
     parser.add_argument("--config", default=str(repository() / "configs" / "train.yaml"))
     parser.add_argument("--device", default="cuda:0")
     parser.add_argument("--save-logits", action="store_true")

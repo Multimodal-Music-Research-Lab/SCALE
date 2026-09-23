@@ -1,10 +1,17 @@
 # SCALE
 
-SCALE predicts section boundaries and labels from music audio. It uses separate audio pathways for boundary detection and section labeling, with timestamped lyrics providing additional chorus evidence. Explore example predictions on the [SCALE demo](https://multimodal-music-research-lab.github.io/scale-demo/). The static demo source is in [`docs/`](docs/).
+SCALE predicts section boundaries and labels from music audio. It uses separate audio pathways for boundary detection and section labeling, with timestamped lyrics providing additional chorus evidence. Explore example predictions on the [SCALE demo](https://multimodal-music-research-lab.github.io/SCALE/). The static demo source is in [`docs/`](docs/).
 
 ## Quick start: inference with pretrained weights
 
-After completing [installation](#installation) and [model setup](#model-setup), place the SCALE checkpoint at `checkpoints/best.ckpt` and run:
+After completing [installation](#installation) and [model setup](#model-setup), download the pretrained checkpoint:
+
+```bash
+mkdir -p checkpoints
+curl -fL https://github.com/Multimodal-Music-Research-Lab/SCALE/releases/download/v1.0.0/best.ckpt -o checkpoints/best.ckpt
+```
+
+Then run:
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 bash scripts/infer.sh \
@@ -17,7 +24,7 @@ CUDA_VISIBLE_DEVICES=0 bash scripts/infer.sh \
 
 This command extracts audio features and timestamped lyrics, then writes section predictions. Training data and retraining are not required for inference.
 
-**Release status:** a verified pretrained checkpoint will be distributed through [GitHub Releases](https://github.com/Multimodal-Music-Research-Lab/SCALE/releases); no download is available yet. The command above requires a compatible SCALE checkpoint obtained separately. SheetSage-MSA is not yet publicly released; full training reproduction depends on its annotations, splits, and lyric-selection metadata becoming available. Neither weights nor datasets are bundled with the code.
+**Pretrained model:** [Download best.ckpt](https://github.com/Multimodal-Music-Research-Lab/SCALE/releases/download/v1.0.0/best.ckpt) (1.70 GiB; SHA-256: `3786bd611a39c58922c99102e0e4ab658bf5e4eae55c2145a3270e0898808763`). This is the checkpoint used for the paper results. SheetSage-MSA is not yet publicly released; full training reproduction depends on its annotations, splits, and lyric-selection metadata becoming available. Neither the checkpoint nor datasets are committed to Git.
 
 ## Installation
 
